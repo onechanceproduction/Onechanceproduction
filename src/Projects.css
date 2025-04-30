@@ -1,0 +1,99 @@
+.projects-container {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .projects-heading {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .projects-subtext {
+    margin: 0.5rem 0 2rem;
+    font-size: 1rem;
+  }
+  
+  .filmy-text {
+    font-style: italic;
+    color: orange;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Changed this to 2 columns on larger screens */
+    gap: 1.5rem 0rem; /* Consistent gap */
+    justify-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 1.2rem;
+  }
+  
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 570px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: scale(1.05); /* Added: zooms the entire card */
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .project-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .projects-heading {
+      font-size: 1.5rem;
+    }
+  
+    .projects-subtext {
+      font-size: 0.9rem;
+    }
+  
+    .project-title {
+        font-size: 1.2rem;
+        padding: 0 1rem; /* Prevents text overflow */
+        text-align: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* One column on small screens */
+        gap: 1rem;
+    }
+
+    .project-card {
+        max-width: 90%; /* Adds some margin on mobile */
+    }
+   }

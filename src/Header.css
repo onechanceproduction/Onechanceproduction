@@ -1,0 +1,118 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  background-color: white;
+  padding-top: 10px;
+  position: relative;
+  padding-right: 20px;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  z-index: 9999;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #4e4c4c;
+}
+
+.get-in-touch {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.get-in-touch button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-in-touch button:hover {
+  background-color: #4e4c4c;
+}
+
+/* -------------------- */
+/* NEW: Hamburger Styles */
+/* -------------------- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: -1px;
+  margin-top: -10px;
+}
+
+.nav-toggle .bar {
+  height: 2px;            /* Increase thickness (was 3px) */
+  width: 30px;            /* Optional: wider bars */
+  background-color: rgb(0, 0, 0);  
+  border-radius: 3px;
+  margin: 4px 0;          /* Space between bars */
+  transition: 0.3s ease;  /* Smooth transitions if animated later */
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 25px;
+  background: black;
+  border-radius: 3px;
+}
+
+/* Show hamburger and hide nav on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* Ensure nav-links are displayed when active */
+  }
+
+  .nav-toggle {
+    display: flex;
+    width: 10px;
+    top: 15px;
+    right: 30px; /* Position it correctly */
+   
+  }
+
+  
+
+  .get-in-touch {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,60 @@
+/* --- BASE STYLES for Desktop --- */
+.footer {
+    display: flex;
+    flex-direction: column; /* Horizontal layout for desktop */
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 40px;
+    background-color: rgb(26, 2, 2);
+    color: white;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+/* Optional background wrapper */
+.footer-back {
+    background-color: black;
+    width: 100%;
+}
+
+/* Heading or text */
+.One-chance {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Horizontal bar */
+.Bar {
+    background-color: white;
+    width: 100%;
+    margin: 10px auto;
+    border: 0;
+    border-top: 2px solid #f2ecec;
+}
+
+/* --- MEDIA QUERIES FOR SMALLER SCREENS --- */
+
+/* Tablet & Mobile (screen 768px and below) */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        justify-content: center;
+        padding: 40px 20px;
+        position: relative; /* Remove sticky for small screens */
+    }
+
+    .One-chance {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .Bar {
+        margin: 10px 0;
+    }
+}
