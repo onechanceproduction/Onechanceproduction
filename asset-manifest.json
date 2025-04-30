@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Onechanceproduction/static/css/main.92f1fe99.css",
-    "main.js": "/Onechanceproduction/static/js/main.1c254767.js",
+    "main.js": "/Onechanceproduction/static/js/main.d30bfe2d.js",
     "static/js/453.195b869a.chunk.js": "/Onechanceproduction/static/js/453.195b869a.chunk.js",
     "static/media/logo.svg": "/Onechanceproduction/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Onechanceproduction/index.html",
     "main.92f1fe99.css.map": "/Onechanceproduction/static/css/main.92f1fe99.css.map",
-    "main.1c254767.js.map": "/Onechanceproduction/static/js/main.1c254767.js.map",
+    "main.d30bfe2d.js.map": "/Onechanceproduction/static/js/main.d30bfe2d.js.map",
     "453.195b869a.chunk.js.map": "/Onechanceproduction/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92f1fe99.css",
-    "static/js/main.1c254767.js"
+    "static/js/main.d30bfe2d.js"
   ]
 }
