@@ -19,7 +19,7 @@ const Contact = () => {
           <h3>Social Media</h3>
           <div className="social-icons">
             {/* Later we will add icons properly */}
-            <a href="https://www.instagram.com/1chance.productions/"><img src="img/icons/instagram.png" alt="Instagram" className='icon-img instagram'/></a>
+            <a href="https://www.instagram.com/1chance.productions/"><img src="img\icons\instagram.png" alt="Instagram" className='icon-img instagram'/></a>
             <a href="https://mailto:productionsonechance@gmail.com"><img src="img\icons\search.png" alt="Gmail" className='icon-img gmail'/></a>
           </div>
         </div>
