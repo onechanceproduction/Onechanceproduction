@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: column; /* stack image and button vertically */
+    align-items: center;    /* center items horizontally */
+    justify-content: center; /* optional, vertical centering if needed */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .image-container {
+    display: flex;
+    text-align: center;
+    height: 500px;
+  }
+
+  .about-img{
+    width: 100%;
+    height: auto;      /* let the height adjust to maintain aspect ratio */
+    display: block;
+    margin: 0 auto;    /* center the image horizontally */
+    border-radius: 10px; /* optional: adds rounded corners */
+  }
+  
+  .button {
+    margin-top: 2.5rem;
+  }
+  
+  .explore-now {
+    width: 200px;
+    padding: 15px;
+    background-color: #111110;
+    color: white;
+    border: 2px solid transparent; /* Add default transparent border */
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    font-size: medium;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .explore-now:hover {
+    background-color: white;   /* Change background on hover */
+    color: #111110;            /* Change text color on hover */
+    border: 2px solid #111110; /* Add a visible border on hover */
+  }
+
+  .heading-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .vertical-line{
+    width: 1px;
+    background-color: black;
+    height: 300px;
+    margin-left: -281px;
+    margin-top: 10px;
+    border: 0;
+    border-top: 2px solid #070707;
+  }
+
+@media (max-width: 768px) {
+    .image-container {
+      text-align: center;
+    }
+  
+    .about-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    .button {
+      display: flex;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+  
+    .explore-now {
+      width: 80%;
+      max-width: 200px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
