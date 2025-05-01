@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/img/gallery/logo1.png" alt="One chance production" />
+        <img src={process.env.PUBLIC_URL + "/img/gallery/logo1.png"} alt="One chance production" />
       </div>
 
       <div className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>

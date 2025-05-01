@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom';
 const projects = [
   {
     title: 'PHOTOSHOOT',
-    image: '/img/hero-area.jpg',
+    image: process.env.PUBLIC_URL + '/img/hero-area.jpg',
     link: '/projects/photoshoot',
   },
   {
     title: 'BRAND FILMS',
-    image: '/img/hero-area.jpg',
+    image: process.env.PUBLIC_URL + '/img/hero-area.jpg',
     link: '/projects/brand-films',
   },
   {
     title: 'FILMS',
-    image: '/img/hero-area.jpg',
+    image: process.env.PUBLIC_URL + '/img/hero-area.jpg',
     link: '/projects/films',
   },
   {
     title: 'MUSIC VIDEOS',
-    image: '/img/hero-area.jpg',
+    image: process.env.PUBLIC_URL + '/img/hero-area.jpg',
     link: '/projects/music-videos',
   },
 ];
