@@ -5,13 +5,13 @@
   }
   
   .projects-heading {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
   }
   
   .projects-subtext {
     margin: 0.5rem 0 2rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   
   .filmy-text {
@@ -24,7 +24,7 @@
     grid-template-columns: repeat(2, 1fr); /* Changed this to 2 columns on larger screens */
     gap: 1.5rem 0rem; /* Consistent gap */
     justify-items: center;
-    max-width: 1200px;
+    max-width: 876px;
     margin: auto;
     padding-top: 1.2rem;
   }
@@ -32,7 +32,7 @@
   .project-card {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 26rem;
     max-width: 570px;
     cursor: pointer;
     text-decoration: none;
