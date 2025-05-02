@@ -32,8 +32,8 @@
   .project-card {
     position: relative;
     overflow: hidden;
-    width: 26rem;
-    max-width: 570px;
+    width: 100%;
+    max-width: 26rem;
     cursor: pointer;
     text-decoration: none;
     transition: transform 0.3s ease;

@@ -66,27 +66,44 @@
     border-top: 2px solid #070707;
   }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      height: auto; /* Allow height to adjust */
+      padding: 0 1rem;
     }
   
     .about-img {
       width: 100%;
       height: auto;
       border-radius: 10px;
+      max-width: 100%;
     }
   
     .button {
       display: flex;
       justify-content: center;
+      flex-direction: row;  /* Keep buttons in a row */
+      gap: 0.5rem;          /* Space between buttons */
       margin-top: 2.5rem;
+      padding: 0 1rem;
+      flex-wrap: nowrap;    /* Keep on same line */
     }
   
     .explore-now {
-      width: 80%;
-      max-width: 200px;
+      flex: 1 1 auto;             /* Allow button to shrink/grow */
+      min-width: 120px;           /* Prevent it from getting too small */
       padding: 10px;
       font-size: 1rem;
+      white-space: nowrap;        /* Prevent text wrapping */
+      text-align: center;
+    }
+  
+    .vertical-line {
+      display: none; /* Hide on mobile if it interferes visually */
     }
   }
+  
