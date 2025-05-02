@@ -72,6 +72,31 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
+  .admin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+  }
+  
+  .upload-btn,
+  .delete-btn {
+    background-color: #ff6600; /* orange tone */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-btn:hover,
+  .delete-btn:hover {
+    background-color: #cc5200; /* darker on hover */
+  }
+  
   
   @media (max-width: 768px) {
     .projects-heading {
@@ -96,4 +121,16 @@
     .project-card {
         max-width: 90%; /* Adds some margin on mobile */
     }
+    .upload-btn,
+  .delete-btn {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .admin-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
    }

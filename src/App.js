@@ -8,13 +8,23 @@ import Home from './Home';
 import Footer from './Footer';
 import Scroll from "./Scroll"; 
 import About from './About';
+import Admin from './Admin';
+import { useEffect } from 'react';
 
 function App() {
+  // useEffect(() => {
+  //   // Clear admin mode if user refreshed or reloaded site
+  //   if (window.location.pathname !== '/admin') {
+  //     localStorage.removeItem('isAdmin');
+  //   }
+  // }, []);
+  
   return (
     <Router>
       <Header />
       <Scroll />
       <Routes>
+        <Route path="/admin" element={<Admin />} />
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Contact" element={<Contact />} />

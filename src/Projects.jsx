@@ -26,6 +26,7 @@ const projects = [
 ];
 
 const ProjectsPage = () => {
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
   return (
     <div className="projects-container">
       <h2 className="projects-heading">Where Creativity Meets
@@ -34,6 +35,13 @@ const ProjectsPage = () => {
       Crafting Your <span className="filmy-text">Unique</span> Story
       </p>
       <hr className='bar'></hr>
+
+      {isAdmin && (
+        <div className="admin-actions">
+          <button className="upload-btn">Upload New Project</button>
+          <button className="delete-btn">Delete Project</button>
+        </div>
+      )}
 
       <div className="project-grid">
         {projects.map((project, index) => (

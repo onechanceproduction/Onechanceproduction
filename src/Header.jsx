@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+
+
+const handleViewAsVisitor = () => {
+    localStorage.removeItem('isAdmin');
+    navigate(location.pathname); // navigate to current path
+    window.location.reload(); // refresh to reflect admin view change
+  };
 
   return (
     <header className="header">
@@ -22,6 +32,11 @@ const Header = () => {
         <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
         <Link to="/projects" onClick={() => setMenuOpen(false)}>Our Projects</Link>
         <Link to="/Contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        {isAdmin && (
+          <button className="visitor-btn" onClick={handleViewAsVisitor}>
+            View as Visitor
+          </button>
+        )}
       </nav>
     </header>
   );
