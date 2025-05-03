@@ -98,6 +98,11 @@
   background-color: #555;
 }
 
+.nav-links a.active-link {
+  color: #FFC107;
+  font-weight: bold;
+}
+
 /* Show hamburger and hide nav on mobile */
 @media (max-width: 768px) {
   .nav-links {

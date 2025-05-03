@@ -4,7 +4,7 @@
     align-items: center;    /* center items horizontally */
     justify-content: center; /* optional, vertical centering if needed */
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
   }
   
   .image-container {
@@ -42,7 +42,17 @@
     align-items: center;
     justify-content: center;
   }
+
+  .about-us-container{
+    border-left: 1px solid #333;
+    padding-left: 16px;
+  }
   
+  .about-us-heading{
+    font-weight: bold;
+    font-style: italic;
+  }
+
   .explore-now:hover {
     background-color: white;   /* Change background on hover */
     color: #111110;            /* Change text color on hover */
@@ -55,14 +65,18 @@
     gap: 1rem;
     margin-bottom: 3rem;
     margin-top: 3rem;
+    justify-items: center;
+    max-width: 876px;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .vertical-line{
     width: 1px;
     background-color: black;
     height: 300px;
-    margin-left: -281px;
-    margin-top: 10px;
+    margin: 10px auto 10px;
     border: 0;
     border-top: 2px solid #070707;
   }
@@ -102,9 +116,21 @@
       white-space: nowrap;        /* Prevent text wrapping */
       text-align: center;
     }
-  
-    .vertical-line {
-      display: none; /* Hide on mobile if it interferes visually */
+    .heading-container {
+      flex-direction: column; /* Stack heading and content */
+      text-align: center;
+      padding: 1rem;
+      gap: 1rem;
     }
+  
+    .about-us-container {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .about-us{
+      text-align: left;
+    }
+  
   }
   

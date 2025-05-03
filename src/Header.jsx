@@ -28,10 +28,10 @@ const handleViewAsVisitor = () => {
       </div>
 
       <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <Link to="/Home" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/projects" onClick={() => setMenuOpen(false)}>Our Projects</Link>
-        <Link to="/Contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        <Link to="/Home" className={location.pathname === "/Home" ? "active-link" : ""} onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/About" className={location.pathname === "/About" ? "active-link" : ""} onClick={() => setMenuOpen(false)}>About</Link>
+        <Link to="/Projects" className={location.pathname === "/Projects" ? "active-link" : ""} onClick={() => setMenuOpen(false)}>Our Projects</Link>
+        <Link to="/Contact" className={location.pathname === "/Contact" ? "active-link" : ""} onClick={() => setMenuOpen(false)}>Contact</Link>
         {isAdmin && (
           <button className="visitor-btn" onClick={handleViewAsVisitor}>
             View as Visitor
