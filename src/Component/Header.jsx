@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Header.css';
+import '../CSS/Header.css';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {

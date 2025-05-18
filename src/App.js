@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { HashRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
-import Header from './Header';
-import Contact from './Contact';
-import Projects from './Projects';
-import Home from './Home';
-import Footer from './Footer';
+import Header from './Component/Header';
+import Contact from './Component/Contact';
+import Projects from './Component/Projects';
+import Home from './Component/Home';
+import Footer from './Component/Footer';
 import Scroll from "./Scroll"; 
-import About from './About';
-import Admin from './Admin';
+import About from './Component/About';
+import Admin from './Admin/Admin';
 import { useEffect } from 'react';
 
 function App() {
