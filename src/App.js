@@ -9,6 +9,10 @@ import Footer from './Component/Footer';
 import Scroll from "./Scroll"; 
 import About from './Component/About';
 import Admin from './Admin/Admin';
+import Photoshoot from './Component/Photoshoot';
+import Films from './Component/Films';
+import BrandFilms from './Component/BrandFilms';
+import MusicVideos from './Component/MusicVideos';
 import { useEffect } from 'react';
 
 function App() {
@@ -30,6 +34,10 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Projects" element={<Projects/>}/>
         <Route path="/About" element={<About/>}/>
+        <Route path="/Photoshoot" element={<Photoshoot/>}/>
+        <Route path="/Films" element={<Films/>}/>
+        <Route path="/MusicVideos" element={<MusicVideos/>}/>
+        <Route path="/BrandFilms" element={<BrandFilms/>}/>
       </Routes>
       <Footer/>
     </Router>
