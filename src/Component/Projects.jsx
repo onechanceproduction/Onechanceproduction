@@ -78,40 +78,6 @@ const ProjectsPage = () => {
                   className="icon upload-icon"
                   onClick={() => HandleUpload(project.id)}
                 />
-                {showModal && (
-                  <div className="modal-backdrop">
-                    <div className="modal-content">
-                      <div className="drop-area">
-                        <p>📤 Drag and drop here</p>
-                        <p>Or</p>
-                        <p>(Max size 50 MB)</p>
-                        <label htmlFor="file-upload" className="browse-link">
-                          Browse file
-                        </label>
-                        <input
-                          type="file"
-                          id="file-upload"
-                          onChange={handleFileChange}
-                          style={{ display: "none" }}
-                          accept=".xlsx"
-                        />
-                        <p className="supported-text">Supported file: .xlsx</p>
-                      </div>
-                      <div className="modal-buttons">
-                        <button onClick={() => setShowModal(false)}>
-                          Cancel
-                        </button>
-                        <button
-                          onClick={() =>
-                            console.log("Upload for", currentProjectId)
-                          }
-                        >
-                          Upload
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             )}
 
@@ -129,6 +95,36 @@ const ProjectsPage = () => {
           </div>
         ))}
       </div>
+      {showModal && (
+        <div className="modal-backdrop">
+          <div className="modal-content">
+            <div className="drop-area">
+              <p>📤 Drag and drop here</p>
+              <p>Or</p>
+              <p>(Max size 50 MB)</p>
+              <label htmlFor="file-upload" className="browse-link">
+                Browse file
+              </label>
+              <input
+                type="file"
+                id="file-upload"
+                onChange={handleFileChange}
+                style={{ display: "none" }}
+                accept=".xlsx"
+              />
+              <p className="supported-text">Supported file: .xlsx</p>
+            </div>
+            <div className="modal-buttons">
+              <button onClick={() => setShowModal(false)}>Cancel</button>
+              <button
+                onClick={() => console.log("Upload for", currentProjectId)}
+              >
+                Upload
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -127,6 +127,70 @@
     margin-left: 0.5rem; /* Small space between icons */
   }
   
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .drop-area {
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .browse-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .supported-text {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1rem;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .modal-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:first-child {
+    background: #eee;
+  }
+  
+  .modal-buttons button:last-child {
+    background: #0056b3;
+    color: white;
+  }
+  
   
   @media (max-width: 768px) {
     .projects-heading {
