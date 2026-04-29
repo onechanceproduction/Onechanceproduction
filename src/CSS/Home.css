@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    flex-direction: column; /* stack image and button vertically */
+    align-items: center;    /* center items horizontally */
+    justify-content: center; /* optional, vertical centering if needed */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .img-container {
+    display: flex;
+    text-align: center;
+    height: 500px;
+    padding: 0 1rem;
+  }
+
+  .about-img{
+    width: 100%;
+    height: auto;      /* let the height adjust to maintain aspect ratio */
+    display: block;
+    margin: 0 auto;    /* center the image horizontally */
+    border-radius: 10px; /* optional: adds rounded corners */
+  }
+  
+  .home-button {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+    display: flex;        /* Required for gap to work */
+    gap: 60px;            /* Adds space between child elements */
+    justify-content: center; /* Optional: center buttons horizontally */
+  }
+
+  .text{
+    padding-top: 80px;
+    font-size: 41px;
+    font-weight: bold;
+  }
+
+  .one{
+    font-style: italic;
+    color: orange;
+  }
+  
+  .know-more {
+    width: 200px;
+    padding: 10px;
+    background-color: #111110;
+    color: white;
+    border: 2px solid transparent; /* Add default transparent border */
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 60px;
+    transition: all 0.3s ease;
+    font-size: medium;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .know-more:hover {
+    background-color: white;   /* Change background on hover */
+    color: #111110;            /* Change text color on hover */
+    border: 2px solid #111110; /* Add a visible border on hover */
+    box-shadow: #111110;
+  }
+
+  .heading-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .img-container {
+      text-align: center;
+      height: auto; /* let image height adapt */
+      padding: 0 1rem; /* prevent image from touching edges */
+    }
+  
+    .about-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    .text {
+      padding-top: 2rem;
+      font-size: 1.5rem;
+      text-align: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .home-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: nowrap; /* Force same line */
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+  
+    .know-more {
+      width: 80%;
+      max-width: 200px;
+      padding: 10px;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+  
+    .heading-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1rem;
+      gap: 0.5rem;
+    }
+  }
+  

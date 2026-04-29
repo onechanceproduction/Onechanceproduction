@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    flex-direction: column; /* stack image and button vertically */
+    align-items: center;    /* center items horizontally */
+    justify-content: center; /* optional, vertical centering if needed */
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+  }
+  
+  .image-container {
+    display: flex;
+    text-align: center;
+    height: 500px;
+    padding: 0 1rem;
+  }
+
+  .about-img{
+    width: 100%;
+    height: auto;      /* let the height adjust to maintain aspect ratio */
+    display: block;
+    margin: 0 auto;    /* center the image horizontally */
+    border-radius: 10px; /* optional: adds rounded corners */
+  }
+  
+  .button {
+    margin-top: 2.5rem;
+  }
+  
+  .explore-now {
+    width: 200px;
+    padding: 15px;
+    background-color: #111110;
+    color: white;
+    border: 2px solid transparent; /* Add default transparent border */
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    font-size: medium;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-us-container{
+    border-left: 1px solid #333;
+    padding-left: 16px;
+  }
+  
+  .about-us-heading{
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .explore-now:hover {
+    background-color: white;   /* Change background on hover */
+    color: #111110;            /* Change text color on hover */
+    border: 2px solid #111110; /* Add a visible border on hover */
+  }
+
+  .heading-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    justify-items: center;
+    max-width: 876px;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .vertical-line{
+    width: 1px;
+    background-color: black;
+    height: 300px;
+    margin: 10px auto 10px;
+    border: 0;
+    border-top: 2px solid #070707;
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: auto; /* Allow height to adjust */
+      padding: 0 1rem;
+    }
+  
+    .about-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      max-width: 100%;
+    }
+  
+    .button {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;  /* Keep buttons in a row */
+      gap: 0.5rem;          /* Space between buttons */
+      margin-top: 2.5rem;
+      padding: 0 1rem;
+      flex-wrap: nowrap;    /* Keep on same line */
+    }
+  
+    .explore-now {
+      flex: 1 1 auto;             /* Allow button to shrink/grow */
+      min-width: 120px;           /* Prevent it from getting too small */
+      padding: 10px;
+      font-size: 1rem;
+      white-space: nowrap;        /* Prevent text wrapping */
+      text-align: center;
+    }
+    .heading-container {
+      flex-direction: column; /* Stack heading and content */
+      text-align: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .about-us-container {
+      padding-left: 0;
+      border-left: none;
+    }
+
+    .about-us{
+      text-align: left;
+    }
+  
+  }
+  

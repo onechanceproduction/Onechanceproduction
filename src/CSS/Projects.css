@@ -1,0 +1,238 @@
+.projects-container {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .projects-heading {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .projects-subtext {
+    margin: 0.5rem 0 2rem;
+    font-size: 1.3rem;
+  }
+  
+  .filmy-text {
+    font-style: italic;
+    color: orange;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Changed this to 2 columns on larger screens */
+    gap: 1.5rem 0rem; /* Consistent gap */
+    justify-items: center;
+    max-width: 876px;
+    margin: auto;
+    padding-top: 1.2rem;
+  }
+  
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 26rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: scale(1.05); /* Added: zooms the entire card */
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .project-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .admin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+  }
+  
+  .upload-btn,
+  .delete-btn {
+    background-color: #ff6600; /* orange tone */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-btn:hover,
+  .delete-btn:hover {
+    background-color: #cc5200; /* darker on hover */
+  }
+
+  .project-card-wrapper {
+    position: relative;
+  }
+  
+  .admin-actions {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    top: 10px; /* Adjusts the icon's vertical position */
+    right: 10px; /* Adjusts the icon's horizontal position */
+    z-index: 1; /* Ensures icons are always on top */
+  }
+  
+  .icon {
+    font-size: 1.8rem; /* Icon size */
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #ff6600; /* Changes icon color on hover */
+  }
+  
+  .upload-icon,
+  .trash-icon {
+    margin-left: 0.5rem; /* Small space between icons */
+  }
+  
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .drop-area {
+    border: 2px dashed #ccc;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .browse-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .supported-text {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1rem;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .modal-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:first-child {
+    background: #eee;
+  }
+  
+  .modal-buttons button:last-child {
+    background: #0056b3;
+    color: white;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .projects-heading {
+      font-size: 1.5rem;
+    }
+  
+    .projects-subtext {
+      font-size: 0.9rem;
+    }
+  
+    .project-title {
+        font-size: 1.2rem;
+        padding: 0 1rem; /* Prevents text overflow */
+        text-align: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* One column on small screens */
+        gap: 1rem;
+    }
+
+    .project-card {
+        max-width: 90%; /* Adds some margin on mobile */
+    }
+    .upload-btn,
+  .delete-btn {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .admin-actions {
+    top: 5px; /* Adjust the vertical position */
+    right: 5px; /* Adjust the horizontal position */
+    gap: 0.8rem;
+  }
+
+  .icon {
+    font-size: 1.5rem; /* Smaller icons on mobile */
+  }
+
+  .project-card-wrapper {
+    max-width: 100%; /* Ensures the card wrapper stays within the screen */
+  }
+   }
